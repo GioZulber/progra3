@@ -1,0 +1,50 @@
+### 1. **Algoritmo de Karatsuba para Multiplicación de Enteros**
+
+**Problema**: Multiplicar dos números enteros grandes.
+
+**Estrategia**:
+   - **Dividir**: Divide cada número en dos partes, una correspondiente a los dígitos más significativos y otra a los dígitos menos significativos.
+   - **Conquistar**: Realiza tres multiplicaciones más pequeñas utilizando las partes divididas:
+     - Multiplicación de las partes superiores.
+     - Multiplicación de las partes inferiores.
+     - Multiplicación de la suma de las partes superiores e inferiores de ambos números.
+   - **Combinar**: Combina los resultados de las tres multiplicaciones utilizando operaciones de suma y desplazamiento (por potencias de 10) para obtener el producto final.
+
+**Explicación**:
+   - El algoritmo de Karatsuba reduce el número de multiplicaciones necesarias de cuatro a tres al usar las subpartes de los números, lo que mejora la eficiencia en comparación con la multiplicación tradicional, especialmente para números grandes.
+
+### 2. **Algoritmo de Máximo Subarreglo (Maximum Subarray Problem)**
+
+**Problema**: Encontrar la sublista contigua en una lista de números enteros (positivos y negativos) que tiene la suma más grande.
+
+**Estrategia**:
+   - **Dividir**: Divide la lista en dos mitades.
+   - **Conquistar**: Resuelve recursivamente el problema para las tres partes:
+     1. La sublista que está completamente en la mitad izquierda.
+     2. La sublista que está completamente en la mitad derecha.
+     3. La sublista que cruza la mitad, es decir, empieza en la mitad izquierda y termina en la mitad derecha.
+   - **Combinar**: Compara los máximos obtenidos de las tres partes y selecciona el mayor. Este será el máximo subarreglo para la lista completa.
+
+**Explicación**:
+   - Este algoritmo divide la lista en dos partes y resuelve el problema para cada mitad. Luego, también considera la posibilidad de que el máximo subarreglo cruce la frontera entre las dos mitades. La combinación final compara los resultados para determinar el subarreglo de suma máxima. La técnica permite reducir la complejidad del problema a (O(n log n)), en lugar del ( O(n^2) ) de una solución de fuerza bruta.
+
+---
+
+Este problema es un clásico en la programación y es muy útil en aplicaciones de análisis de datos y series temporales, donde se busca identificar el segmento más "fuerte" o "débil" en términos de suma acumulada.
+
+### 3. **Transformada Rápida de Fourier (FFT)**
+
+**Problema**: Calcular la Transformada Discreta de Fourier (DFT) de una señal.
+
+**Estrategia**:
+   - **Dividir**: Divide la señal en partes de longitud par en subproblemas más pequeños.
+   - **Conquistar**: Aplica recursivamente la Transformada Discreta de Fourier a cada sublista.
+   - **Combinar**: Combina los resultados de las sublistas utilizando combinaciones de senos y cosenos para obtener la transformada completa.
+
+**Explicación**:
+   - La Transformada Rápida de Fourier (FFT) reduce el número de operaciones necesarias para calcular la DFT, pasando de \( O(n^2) \) a \( O(n \log n) \). Esto se logra al dividir la señal en partes más pequeñas y luego combinar los resultados de manera eficiente.
+
+---
+
+Estos ejemplos destacan cómo la técnica de divide y conquista puede aplicarse en diferentes áreas, desde la multiplicación de números grandes hasta la optimización de operaciones matemáticas complejas como la FFT.
+
