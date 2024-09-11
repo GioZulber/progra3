@@ -8,7 +8,6 @@
     encuentra un valor de y positivo y uno negativo, entonces no se puede realizar una busqueda binaria y se debe continuar 
     buscado en el inicio 2**k donde k es un valor que se incrementa en 1 cada vez que no se encuentra un valor de y positivo
     y uno negativo.
-    
 """
 
 
